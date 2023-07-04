@@ -68,12 +68,12 @@ const sendResetPasswordMail = async(name, email, token)=> {
       secure:false,
       requireTLS:true,
       auth:{
-        user:"nabeelcheruvathala@gmail.com",
-        pass:'jmgukjpevexeefwq'
+        user:"",
+        pass:''
       }
     });
     const mailOptions = {
-      from:"nabeelcheruvathala@gmail.com",
+      from:"",
       to:email,
       subject:'For Reset Password',
       html:'<p>Hi '+name+', please click here to <a href="http://127.0.0.1:2000/forget-password?id='+token+'"> Reset </a> your password.</p>'
