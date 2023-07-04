@@ -1,0 +1,12 @@
+<%- include('../layouts/header.ejs'); %>
+
+if(typeof message !== 'undefined') {
+  %>
+  <div class="alert alert-success mt-5">
+    <strong><%= message %></strong>
+  </div>
+  <%
+}
+%>
+
+<%- include('../layouts/footer.ejs'); %>

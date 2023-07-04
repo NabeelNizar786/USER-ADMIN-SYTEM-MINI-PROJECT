@@ -1,0 +1,69 @@
+<%- include('../layouts/header.ejs'); %>
+
+<style>
+  .btn-dark{
+    position:fixed;
+    right:320px;
+    top:10px;
+}
+</style>
+
+<header style="
+background-image: url(https://p4.wallpaperbetter.com/wallpaper/801/226/487/awesome-background-wallpaper-preview.jpg);
+height: 100vh;background-size: cover;
+">
+
+<nav class="navbar navbar-expand-lg bg-transparent">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">Hidden brand</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">ADMIN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled"><%= admin.name %></a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<a href="/admin/logout"><button  type="button" class="btn btn-dark">
+  LOGOUT
+</button></a>
+
+<br><br>
+
+<div
+class="p-5 text-center bg-image"
+
+>
+<div class="mask" >
+  <div class="d-flex justify-content-center align-items-center h-100">
+    <div class="text-primary">
+      <h1 class="alert alert-warning mb-4">Welcome,<%=admin.name %></h1>
+      <h2 class="alert alert-success mb-3">Name-<%=admin.name %></h2>
+      <h2 class="alert alert-primary mb-3">Email-<%=admin.email %></h2>
+
+      <a class="btn btn-outline-dark btn-lg" href="/admin/dashboard" role="button"
+      >DASHBOARD</a
+      >
+    </div>
+  </div>
+</div>
+</div>
+
+</header>
+
+<%- include('../layouts/footer.ejs'); %>

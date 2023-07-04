@@ -1,0 +1,49 @@
+<%- include('../layouts/header.ejs'); %>
+
+<div class="container mt-5">
+  <h1>REGISTRATION</h1>
+<form action="" method="POST" enctype="multipart/form-data">
+
+  <div class="mb-3">
+    <label for="name" class="form-label">NAME<sup class="text-danger">*</sup></label>
+    <input type="text" class="form-control" name="name" id="name" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">EMAIL ADDRESS</label>
+    <input type="email" class="form-control" name="email" id="EMAIL" required aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="image" class="form-label">IMAGE</label>
+    <input type="file" name="image" class="form-control" id="image" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">PASSWORD</label>
+    <input type="password" class="form-control" name="password" id="password" required>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<%
+
+if(typeof message !== 'undefined') {
+  %>
+  <div class="alert alert-success mt-5 col-md-6 mx-auto">
+    <strong><%= message %></strong>
+  </div>
+  <%
+}
+
+%>
+
+<%- include('../layouts/footer.ejs'); %>
